@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity
     private TextView AdminLink, NotAdminLink, ForgetPasswordLink;
 
     private String parentDbName = "Users";
-    private com.rey.material.widget.CheckBox chkBoxRememberMe;
+    //private com.rey.material.widget.CheckBox chkBoxRememberMe;
 
 
     @Override
@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity
         setContentView(R.layout.activity_login);
 
 
-        LoginButton = (Button) findViewById(R.id.login_btn);
+        LoginButton = (Button) findViewById(R.id.login_button);
         InputPassword = (EditText) findViewById(R.id.login_password_input);
         InputPhoneNumber = (EditText) findViewById(R.id.login_phone_number_input);
         AdminLink = (TextView) findViewById(R.id.admin_panel_link);
@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity
         loadingBar = new ProgressDialog(this);
 
 
-        chkBoxRememberMe = (com.rey.material.widget.CheckBox) findViewById(R.id.remember_me_chkb);
+      //  chkBoxRememberMe = (com.rey.material.widget.CheckBox) findViewById(R.id.remember_me_chkb);
         Paper.init(this);
 
 
@@ -129,11 +129,11 @@ public class LoginActivity extends AppCompatActivity
 
     private void AllowAccessToAccount(final String phone, final String password)
     {
-        if(chkBoxRememberMe.isChecked())
-        {
-            Paper.book().write(Prevalent.UserPhoneKey, phone);
-            Paper.book().write(Prevalent.UserPasswordKey, password);
-        }
+//        if(chkBoxRememberMe.isChecked())
+//        {
+//            Paper.book().write(Prevalent.UserPhoneKey, phone);
+//            Paper.book().write(Prevalent.UserPasswordKey, password);
+//        }
 
 
         final DatabaseReference RootRef;
